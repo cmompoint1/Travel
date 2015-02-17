@@ -30,7 +30,6 @@ class DestinationsController < ApplicationController
   # POST /destinations.json
   def create
     @destination = Destination.new(destination_params)
-    @user = User.create( user_params )
 
     respond_to do |format|
       if @destination.save
@@ -75,10 +74,9 @@ class DestinationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def destination_params
-      params.require(:destination).permit(:city, :country, :description)
+      params.require(:destination).permit(:city, :country, :description, :avatar)
     end
 
     def user_params
-    params.require(:user).permit(:name, :description, :avatar)
 end
 end
