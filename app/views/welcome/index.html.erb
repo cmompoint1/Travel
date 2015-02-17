@@ -1,0 +1,57 @@
+
+	<style>
+	body {
+		margin: <%= @margin %>;
+		background-color: <%= @color%>;
+	}
+		.thumbnail{
+		margin: 10px;
+		width: 500px;
+		height: 400px;
+		}
+		.color_box{
+			width: 20px;
+		    height: 20px;
+		    margin: 5px;
+		    border-width: 1px;
+		    border-style: solid;
+		    display: inline-block;
+		}
+	</style>
+	<body>
+		<h1> <%= @welcome %> </h1>
+		<h3>Welcome to my Travel Site</h3>
+		<p>This is my very awesome travel site.</p>
+		<br/>
+		<h3> Filter By Country </h3>
+			<ul>
+		  		<% @countries.each do |country| %>
+		  			<li>
+			      		<%= link_to country, custom_destination_path(country: country) %>
+			      	</li>
+	  			<% end %>
+  			</ul>
+		<br>
+		<a href= "/about"> Go To About Page </a>
+		<br/>
+		<a href= "/contact"> Go To Contact Us Page </a>
+		<br/>
+		<br/>
+
+		<h1> My Images </h1>
+		<% @images.each do |picture| %>
+			<%= image_tag picture, class: 'thumbnail'%>
+		<% end %>
+		<br/>
+		<h3> Background Colors </h3>
+		<a href= "/?color=white"><div class= 'color_box', style= 'background-color: white'></div></a>
+		<a href= "/?color=red"><div class= 'color_box', style= 'background-color: red'></div></a>
+		<a href= "/?color=yellow"><div class= 'color_box', style= 'background-color: yellow;'></div></a>
+		<a href= "/?color=blue"><div class= 'color_box', style= 'background-color: blue;'></div></a>
+		<a href= "/?color=green"><div class= 'color_box', style= 'background-color: green;'></div></a>
+	
+	</body>
+	
+
+
+

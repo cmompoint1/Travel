@@ -1,0 +1,18 @@
+
+<style>
+	body {
+		margin: <%= @margin %>;
+		background-color: <%= @color%>;
+	}
+</style>
+
+<body>
+	<h1>About Me</h1>
+	<p>Everything that you want to know</p>
+	<p>My favorite color is <%= @color %></p>
+	<p>My shoe size is <%=@size %></p>
+	<% if @size.to_i > 12 %>
+		I have HUGE feet!
+	<% end %>
+	<a href= "/?welcome=You Came From About"> Go To Home Page </a>
+</body>
