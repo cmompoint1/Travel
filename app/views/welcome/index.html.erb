@@ -31,24 +31,14 @@
 			      	</li>
 	  			<% end %>
   			</ul>
-		<br>
-		<a href= "/about"> Go To About Page </a>
-		<br/>
-		<a href= "/contact"> Go To Contact Us Page </a>
 		<br/>
 		<br/>
 
-		<h1> My Images </h1>
+		<h1> Staycation Pics </h1>
 		<% @images.each do |picture| %>
 			<%= image_tag picture, class: 'thumbnail'%>
 		<% end %>
 		<br/>
-		<h3> Background Colors </h3>
-		<a href= "/?color=white"><div class= 'color_box', style= 'background-color: white'></div></a>
-		<a href= "/?color=red"><div class= 'color_box', style= 'background-color: red'></div></a>
-		<a href= "/?color=yellow"><div class= 'color_box', style= 'background-color: yellow;'></div></a>
-		<a href= "/?color=blue"><div class= 'color_box', style= 'background-color: blue;'></div></a>
-		<a href= "/?color=green"><div class= 'color_box', style= 'background-color: green;'></div></a>
 	
 	</body>
 	
