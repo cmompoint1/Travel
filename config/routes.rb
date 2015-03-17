@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get 'contact' => 'welcome#contact'
   get 'custom_destination' => 'destinations#custom_destination'
 
-
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+resources "contacts", only: [:new, :create]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
